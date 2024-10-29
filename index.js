@@ -297,10 +297,10 @@ function findNamesStartingWith(letter) {
   const namesArray = input.split(",").map(name => name.trim());
 
   // Check if there are exactly 20 names
-  // if (namesArray.length !== 20) {
-  //   document.getElementById("result13").textContent = "Please enter exactly 20 names.";
-  //   return;
-  // }
+  if (namesArray.length !== 20) {
+    document.getElementById("result15").textContent = "Please enter exactly 20 names.";
+    return;
+  }
 
   
   const filteredNames = namesArray.filter(name => 
@@ -312,5 +312,41 @@ function findNamesStartingWith(letter) {
     document.getElementById("result15").textContent = "No names start with '" + letter + "'.";
 }
 }
+
+//question16
+
+
+function convertNamesToUppercase() {
+  const input = document.getElementById("name6").value;
+  const namesArray = input.split(",").map(name => name.trim());
+
+  // Check if there are exactly 20 names
+  if (namesArray.length !== 20) {
+    document.getElementById("result16").textContent = "Please enter exactly 20 names.";
+    return;
+  }
+
+  
+ const uppercaseName= namesArray.map(name => name.toUpperCase());
+    document.getElementById("result16").textContent = "name to Uppercase'" + uppercaseName;
+
+}
+// question 17
+function removeName(nameToRemove) {
+  const input = document.getElementById("name7").value;
+  const namesArray = input.split(",").map(name => name.trim());
+
+  // Check if there are exactly 20 names
+  if (namesArray.length !== 20) {
+    document.getElementById("result17").textContent = "Please enter exactly 20 names.";
+    return;
+  }
+
+  // Filter the name to remove
+  const remainedNames = namesArray.filter(name => name !== nameToRemove);
+
+  document.getElementById("result17").textContent = "Filtered names: " + remainedNames.join(", ");
+}
+
 
 
