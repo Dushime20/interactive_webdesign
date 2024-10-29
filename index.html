@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign ment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+ <h1>Name: Dushimimana Fabrice</h1>   
+ <h1>Reg: 222017059</h1>
+
+<h1>Individual Assignment #2 of  Interactive web development</h1>
+
+<hr>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>1. Create an array of 20 numbers and write a function to find the sum of all numbers</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers" name="number"><br>
+        
+        <button onclick="calculateSum(event)" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result"></p>
+</div>
+
+<br>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>2.Write a function to find the largest number in an array of 20 numbers</h2>
+<form action="">
+    <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+    <input type="text" id="numbers2" name="number"><br>
+
+    <button onclick="isLargest()" type="button" class="btn btn-primary p-3">Run</button>
+</form>
+<p id="result2"></p>
+
+</div>
+
+<br>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>3. Write a function to sort an array of 20 numbers in ascending order</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers3" name="number"><br>
+       
+        <button onclick="sorting()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result3"></p>
+</div>
+
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>4. Write a function to reverse an array of 20 numbers.</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers4" name="number"><br>
+        <button onclick="reverse()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result4"></p>
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>5. Write a function that takes an array of 20 numbers and returns only even 
+        numbers</h2>
+    <form action="">
+        <label for="number5">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers5" name="number"><br>
+        <button onclick="isEven()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result5"></p>
+
+ 
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>  6. Write a function that takes an array of 20 numbers and returns only odd 
+        numbers.</h2>
+    <form action="">
+        <label for="number6">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers6" name="number"><br>
+        <button onclick="isAdd()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result6"></p>
+
+  
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2> 7. Write a function that takes an array of 20 numbers and returns the average of 
+        those numbers.</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers7" name="number"><br>
+        <button onclick="isAverage()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result7"></p>
+
+  
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2> Write a function to remove duplicates from an array of 20 numbers.</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers8" name="number"><br>
+        <button onclick="isDuplicate()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result8"></p>
+
+  
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2> 9. Write a function that takes an array of 20 numbers and returns the median
+        value</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers9" name="number"><br>
+        <button onclick="findMedian()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result9"></p>  
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2> 10.Write a function to multiply all elements in an array of 20 numbers by 2</h2>
+    <form action="">
+        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+        <input type="text" id="numbers10" name="number"><br>
+        <button onclick="isDouble()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result10"></p>  
+</div>
+
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>11.Create an array of 20 names and write a function to print each name on a new 
+        line</h2>
+    <form action="">
+        <label for="name">Enter an array of 20 names (comma-separated):</label>
+        <input type="text" id="name1" name="name"><br>
+        <button onclick="printName()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result11"></p>  
+</div>
+
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>12.Write a function to sort an array of 20 names alphabetically</h2>
+    <form action="">
+        <label for="name">Enter an array of 20 names (comma-separated):</label>
+        <input type="text" id="name2" name="name"><br>
+        <button onclick="sortNames()" type="button" class="btn btn-primary p-3">Run</button>
+    </form>
+    <p id="result12"></p>  
+</div>
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>13.Write a function that checks if a specific name exists in an array of 20 names and 
+        returns true or false</h2>
+    <form action="">
+        <label for="name">Enter an array of 20 names (comma-separated):</label>
+        <input type="text" id="name3" name="name"><br>
+        <label for="">Enter name to check</label>
+       
+<input type="text" id="nameToCheck" placeholder="Enter name to check"><br>
+<button onclick="nameExists(document.getElementById('nameToCheck').value)" type="button" class="btn btn-primary p-3">Run</button>
+
+    </form>
+    <p id="result13"></p>  
+</div>
+
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>14.Write a function to find the longest name in an array of 20 names.</h2>
+    <form action="">
+        <label for="name">Enter an array of 20 names (comma-separated):</label>
+        <input type="text" id="name4" name="name"><br>
+<button onclick="findLongestName()" type="button" class="btn btn-primary p-3">Run</button>
+
+    </form>
+    <p id="result14"></p>  
+</div>
+
+<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+    <h2>15.Write a function to find names that start with a specific letter in an array of 20 
+        names.</h2>
+    <form action="">
+        <label for="name">Enter an array of 20 names (comma-separated):</label>
+        <input type="text" id="name5" name="name"><br>
+        <label for="">Enter letter to check</label>
+       
+<input type="text" id="letter" placeholder="Enter letter to check"><br>
+<button onclick="findNamesStartingWith(document.getElementById('letter').value)" type="button" class="btn btn-primary p-3">Run</button>
+
+    </form>
+    <p id="result15"></p>  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+
+
+    
+</body>
+</html>
