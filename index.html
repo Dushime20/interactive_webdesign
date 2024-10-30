@@ -1,219 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assign ment</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <style>
+            .highlight {
+                background-color: yellow; /* Highlight color */
+                font-weight: bold;        /* Bold text */
+            }
+        </style>
 </head>
+
+
 <body>
+    <div class="shadow-lg p-3 mb-5 bg-white rounded  text-center ">
+    <h1>Name: Dushimimana Fabrice</h1>
+    <h1>Reg: 222017059</h1>
 
- <h1>Name: Dushimimana Fabrice</h1>   
- <h1>Reg: 222017059</h1>
+    <h1>Individual Assignment #2 of Interactive web development</h1>
 
-<h1>Individual Assignment #2 of  Interactive web development</h1>
 
-<hr>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>1. Create an array of 20 numbers and write a function to find the sum of all numbers</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers" name="number"><br>
+    </div>
+
+    <hr>
+
+    <div class="shadow-lg p-3 bg-body rounded mt-3">
+        <h2>1. Create an array of 20 numbers and write a function to find the sum of all numbers</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers" name="number"><br>
+
+            <button onclick="calculateSum(event)" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <div class="shadow-lg p-3 bg-body rounded mt-3">~
+        <h2>2.Write a function to find the largest number in an array of 20 numbers</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers2" name="number"><br>
+
+            <button onclick="isLargest()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result2"></p>
+
+    </div>
+
+    <br>
+    <div class="shadow-lg p-3 bg-body rounded mt-3">
+        <h2>3. Write a function to sort an array of 20 numbers in ascending order</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers3" name="number"><br>
+
+            <button onclick="sorting()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result3"></p>
+    </div>
+
+    <div class="shadow-lg p-3 bg-body rounded mt-3">
+        <h2>4. Write a function to reverse an array of 20 numbers.</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers4" name="number"><br>
+            <button onclick="reverse()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result4"></p>
+    </div>
+    <div class="shadow-lg p-3 bg-body rounded mt-3">
+        <h2>5. Write a function that takes an array of 20 numbers and returns only even
+            numbers</h2>
+        <form action="">
+            <label for="number5">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers5" name="number"><br>
+            <button onclick="isEven()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result5"></p>
+
+
+    </div>
+    <div class="shadow-lg p-3 bg-body rounded mt-3">
+        <h2> 6. Write a function that takes an array of 20 numbers and returns only odd
+            numbers.</h2>
+        <form action="">
+            <label for="number6">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers6" name="number"><br>
+            <button onclick="isAdd()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result6"></p>
+
+
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-3">
+        <h2> 7. Write a function that takes an array of 20 numbers and returns the average of
+            those numbers.</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers7" name="number"><br>
+            <button onclick="isAverage()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result7"></p>
+
+
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-3">
+        <h2> Write a function to remove duplicates from an array of 20 numbers.</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers8" name="number"><br>
+            <button onclick="isDuplicate()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result8"></p>
+
+
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-3">
+        <h2> 9. Write a function that takes an array of 20 numbers and returns the median
+            value</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers9" name="number"><br>
+            <button onclick="findMedian()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result9"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-3">
+        <h2> 10.Write a function to multiply all elements in an array of 20 numbers by 2</h2>
+        <form action="">
+            <label for="number">Enter an array of 20 numbers (comma-separated):</label>
+            <input type="text" id="numbers10" name="number"><br>
+            <button onclick="isDouble()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result10"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-3">
+        <h2>11.Create an array of 20 names and write a function to print each name on a new
+            line</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name1" name="name"><br>
+            <button onclick="printName()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result11"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>12.Write a function to sort an array of 20 names alphabetically</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name2" name="name"><br>
+            <button onclick="sortNames()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result12"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>13.Write a function that checks if a specific name exists in an array of 20 names and
+            returns true or false</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name3" name="name"><br>
+            <label for="">Enter name to check</label>
+
+            <input type="text" id="nameToCheck" placeholder="Enter name to check"><br>
+            <button onclick="nameExists(document.getElementById('nameToCheck').value)" type="button"
+                class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result13"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>14.Write a function to find the longest name in an array of 20 names.</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name4" name="name"><br>
+            <button onclick="findLongestName()" type="button" class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result14"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>15.Write a function to find names that start with a specific letter in an array of 20
+            names.</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name5" name="name"><br>
+            <label for="">Enter letter to check</label>
+
+            <input type="text" id="letter" placeholder="Enter letter to check"><br>
+            <button onclick="findNamesStartingWith(document.getElementById('letter').value)" type="button"
+                class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result15"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>16.Write a function to convert all names to uppercase in an array of 20 names.</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name6" name="name"><br>
+
+
+
+            <button onclick="convertNamesToUppercase()" type="button" class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result16"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>17.Write a function to remove a specific name from an array of 20 names.</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name7" name="name"><br>
+
+            <label for="">Enter name to check</label>
+
+            <input type="text" id="nameToRemove" placeholder="Enter letter to check"><br>
+            <button onclick="removeName(document.getElementById('nameToRemove').value)" type="button"
+                class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result17"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>18.Write a function to count how many names contain the letter "a" in an array of
+            20 names.</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name8" name="name"><br>
+
+            <button onclick="countNamesWithA()" type="button" class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result18"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>19.Write a function to concatenate all names in an array of 20 names into a single
+            string, separated by commas.</h2>
+        <form action="">
+            <label for="name">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name9" name="name"><br>
+
+            <button onclick="concatenateNames()" type="button" class="btn btn-primary p-3">Run</button>
+
+        </form>
+        <p id="result19"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>20. Write a function to reverse the order of an array of 20 names.</h2>
+        <form action="">
+            <label for="name20">Enter an array of 20 names (comma-separated):</label>
+            <input type="text" id="name20" name="name"><br>
+
+            <button onclick="reverseNames()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result20"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>21.Create a JavaScript object that represents a person (with properties: name,
+            age, and occupation).</h2>
+        <form action="">
+
+
+            <button onclick="createPerson()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result21"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>22.Write a function that takes a person object and returns a formatted string with
+            their information.</h2>
+        <form action="">
+
+            <button onclick="createPerson()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result20"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>23.Write a function to add a new property to an existing object.</h2>
+        <form action="">
+
+            <button onclick="displayPersonWithNewProperty()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result23"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>24.Write a function to remove a property from an existing object.</h2>
+        <form action="">
+
+            <button onclick="displayPersonWithoutProperty()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result24"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>25.List all properties and values of a JavaScript object</h2>
+        <form>
+            <button onclick="displayPropertiesAndValues()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result25"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>26.Merge two JavaScript objects into one</h2>
+        <form>
+            <button onclick="displayMergedObjects()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result26"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>27.Check if a property exists in a JavaScript object</h2>
+        <form>
+            <button onclick="checkProperty()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result27"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>28.Clone a JavaScript object without referencing the original one</h2>
+        <form>
+            <button onclick="cloneObjectExample()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result28"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>29.Write a function thatLoop through an array of objects and print a specific property</h2>
+        <form>
+            <button onclick="displayPropertyValues()" type="button" class="btn btn-primary p-3">Run</button>
+        </form>
+        <p id="result29"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>30.Write a function that updates a specific property of an object based on user
+            input.</h2>
+        <form id="updateForm">
+            <div class="mb-3">
+                <label for="property" class="form-label">Property Name:</label>
+                <input type="text" id="property" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="value" class="form-label">New Value:</label>
+                <input type="text" id="value" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Run</button>
+        </form>
+        <p id="result30"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>31.Write a function that takes a string and reverses the string.</h2>
+        <form id="reverseForm">
+            <div class="mb-3">
+                <label for="inputString" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleReverseString()">Reverse</button>
+        </form>
+        <p id="result31"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>32.Write a function to count the number of vowels in a given string.</h2>
+        <form id="vowelForm">
+            <div class="mb-3">
+                <label for="inputString1" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString1" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleCountVowels()">Count Vowels</button>
+        </form>
+        <p id="result32"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>Convert a String to Uppercase</h2>
+        <form id="uppercaseForm">
+            <div class="mb-3">
+                <label for="inputString33" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString33" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleConvertToUppercase()">Convert to
+                Uppercase</button>
+        </form>
+        <p id="result33"></p>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>34.Write a function to find the length of a string without using .length</h2>
+        <form id="lengthForm">
+            <div class="mb-3">
+                <label for="inputString34" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString34" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleFindLength()">Find Length</button>
+        </form>
+        <p id="result34"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>35.Write a function to replace all spaces with hyphens in a string.</h2>
+        <form id="hyphenForm">
+            <div class="mb-3">
+                <label for="inputString35" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString35" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleReplaceSpaces()">Replace Spaces</button>
+        </form>
+        <p id="result35"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>36.Write a function to extract the first 10 characters from a string.</h2>
+        <form id="extractForm">
+            <div class="mb-3">
+                <label for="inputString36" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString36" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleExtractFirst10()">Extract</button>
+        </form>
+        <p id="result36"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>Find and Replace a Word in a String</h2>
+        <form id="replaceForm">
+            <div class="mb-3">
+                <label for="inputString" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString37" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="findWord" class="form-label">Word to find:</label>
+                <input type="text" id="findWord" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="replaceWord" class="form-label">Word to replace with:</label>
+                <input type="text" id="replaceWord" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleFindAndReplace()">Find and Replace</button>
+        </form>
+        <p id="result37"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>38.Write a function to split a string into an array of words</h2>
+        <form id="splitForm">
+            <div class="mb-3">
+                <label for="inputString" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString38" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleSplitString()">Split String</button>
+        </form>
+        <p id="result38"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>39.Write a function to remove all numbers from a string.</h2>
+        <form id="removeNumbersForm">
+            <div class="mb-3">
+                <label for="inputString" class="form-label">Enter a string:</label>
+                <input type="text" id="inputString39" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleRemoveNumbers()">Remove Numbers</button>
+        </form>
+        <p id="result39"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2>40.Write a function to insert another string in the existing starting at position 7</h2>
+        <form id="insertForm">
+            <div class="mb-3">
+                <label for="inputString" class="form-label">Enter the original string:</label>
+                <input type="text" id="inputString40" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="insertString" class="form-label">Enter the string to insert:</label>
+                <input type="text" id="insertString" class="form-control" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="handleInsertString()">Insert String</button>
+        </form>
+        <p id="result40"></p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 text-center">
+        <h2>41.Write a JavaScript function that changes the background color of a webpage
+            when a button is clicked.</h2>
+        <button type="button" class="btn btn-primary" onclick="changeBackgroundColor()">Change Color</button>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 text-center">
+        <h2>42.Write a JavaScript function to hide an HTML element when a button is clicked</h2>
+        <div id="elementToHide" class="p-3 bg-light">
+            This element will be hidden when you click the button.
+        </div>
+        <button type="button" class="btn btn-danger mt-3" onclick="hideElement()">Hide Element</button>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 ">
+        <h2>43.Write a JavaScript function to create a new paragraph element and append it to 
+            the body</h2>
+        <button type="button" class="btn btn-primary" onclick="addParagraph()">Add Paragraph</button>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 ">
+        <h2>44.Write a JavaScript function to remove all list items from an unordered list</h2>
+        <ul id="myList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+        <button type="button" class="btn btn-danger mt-3" onclick="removeAllListItems()">Remove All Items</button>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 ">
+        <h2>45.Write a JavaScript function to change the text content of a specific HTML 
+            element.</h2>
+        <p id="textElement">Original Text</p>
+        <button type="button" class="btn btn-primary mt-3" onclick="changeTextContent()">Change Text</button>
+    </div>
+
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 ">
+        <h2>46.Write a JavaScript function to toggle a CSS class on an HTML element</h2>
+        <p id="toggleElement">Click the button to toggle highlight</p>
+        <button type="button" class="btn btn-primary mt-3" onclick="toggleClass()">Toggle Highlight</button>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 ">
+        <h2>47.Write a JavaScript function to count the number of divs on a webpage</h2>
         
-        <button onclick="calculateSum(event)" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result"></p>
-</div>
+        <button type="button" class="btn btn-primary mt-3" onclick="countDivs()">Count Divs</button>
+        <p id="divCount" class="mt-3"></p>
+    </div>
 
-<br>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>2.Write a function to find the largest number in an array of 20 numbers</h2>
-<form action="">
-    <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-    <input type="text" id="numbers2" name="number"><br>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 ">
+        <h2>48.Write a JavaScript function to get the value of a text input field and display it in 
+            a paragraph.</h2>
+        <input type="text" id="textInput" placeholder="Type something here..." class="form-control mt-3">
+        <button type="button" class="btn btn-primary mt-3" onclick="displayInputValue()">Display Value</button>
+        <p id="displayParagraph" class="mt-3"></p>
+    </div>
 
-    <button onclick="isLargest()" type="button" class="btn btn-primary p-3">Run</button>
-</form>
-<p id="result2"></p>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 text-center">
+        <h2>49.Write a JavaScript function to create a table with 3 rows and 3 columns, and 
+            populate it with numbers of your choice</h2>
+        <button type="button" class="btn btn-primary mt-3" onclick="createTable()">Create Table</button>
+        <div id="tableContainer" class="mt-3"></div>
+    </div>
 
-</div>
-
-<br>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>3. Write a function to sort an array of 20 numbers in ascending order</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers3" name="number"><br>
-       
-        <button onclick="sorting()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result3"></p>
-</div>
-
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>4. Write a function to reverse an array of 20 numbers.</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers4" name="number"><br>
-        <button onclick="reverse()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result4"></p>
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>5. Write a function that takes an array of 20 numbers and returns only even 
-        numbers</h2>
-    <form action="">
-        <label for="number5">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers5" name="number"><br>
-        <button onclick="isEven()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result5"></p>
-
- 
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>  6. Write a function that takes an array of 20 numbers and returns only odd 
-        numbers.</h2>
-    <form action="">
-        <label for="number6">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers6" name="number"><br>
-        <button onclick="isAdd()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result6"></p>
-
-  
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2> 7. Write a function that takes an array of 20 numbers and returns the average of 
-        those numbers.</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers7" name="number"><br>
-        <button onclick="isAverage()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result7"></p>
-
-  
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2> Write a function to remove duplicates from an array of 20 numbers.</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers8" name="number"><br>
-        <button onclick="isDuplicate()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result8"></p>
-
-  
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2> 9. Write a function that takes an array of 20 numbers and returns the median
-        value</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers9" name="number"><br>
-        <button onclick="findMedian()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result9"></p>  
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2> 10.Write a function to multiply all elements in an array of 20 numbers by 2</h2>
-    <form action="">
-        <label for="number">Enter an array of 20 numbers (comma-separated):</label>
-        <input type="text" id="numbers10" name="number"><br>
-        <button onclick="isDouble()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result10"></p>  
-</div>
-
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>11.Create an array of 20 names and write a function to print each name on a new 
-        line</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name1" name="name"><br>
-        <button onclick="printName()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result11"></p>  
-</div>
-
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>12.Write a function to sort an array of 20 names alphabetically</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name2" name="name"><br>
-        <button onclick="sortNames()" type="button" class="btn btn-primary p-3">Run</button>
-    </form>
-    <p id="result12"></p>  
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>13.Write a function that checks if a specific name exists in an array of 20 names and 
-        returns true or false</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name3" name="name"><br>
-        <label for="">Enter name to check</label>
-       
-<input type="text" id="nameToCheck" placeholder="Enter name to check"><br>
-<button onclick="nameExists(document.getElementById('nameToCheck').value)" type="button" class="btn btn-primary p-3">Run</button>
-
-    </form>
-    <p id="result13"></p>  
-</div>
-
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>14.Write a function to find the longest name in an array of 20 names.</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name4" name="name"><br>
-<button onclick="findLongestName()" type="button" class="btn btn-primary p-3">Run</button>
-
-    </form>
-    <p id="result14"></p>  
-</div>
-
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>15.Write a function to find names that start with a specific letter in an array of 20 
-        names.</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name5" name="name"><br>
-        <label for="">Enter letter to check</label>
-       
-<input type="text" id="letter" placeholder="Enter letter to check"><br>
-<button onclick="findNamesStartingWith(document.getElementById('letter').value)" type="button" class="btn btn-primary p-3">Run</button>
-
-    </form>
-    <p id="result15"></p>  
-</div>
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>16.Write a function to convert all names to uppercase in an array of 20 names.</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name6" name="name"><br>
-        
-       
-
-<button onclick="convertNamesToUppercase()" type="button" class="btn btn-primary p-3">Run</button>
-
-    </form>
-    <p id="result16"></p>  
-</div>
-
-<div  class="shadow-lg p-3 mb-5 bg-body rounded mt-5">
-    <h2>17.Write a function to remove a specific name from an array of 20 names.</h2>
-    <form action="">
-        <label for="name">Enter an array of 20 names (comma-separated):</label>
-        <input type="text" id="name7" name="name"><br>
+    <div class=" shadow-lg p-3 mb-5 bg-body rounded mt-5">
+        <h2 class="">50.Write a JavaScript function to validate a form (check if name, email, and 
+            password fields are filled)</h2>
+        <form id="myForm" class="mt-4">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="validateForm()">Submit</button>
+        </form>
+        <p id="validationMessage" class="mt-3"></p>
+    </div>
     
-        <label for="">Enter name to check</label>
-       
-        <input type="text" id="nameToRemove" placeholder="Enter letter to check"><br>
-        <button onclick="removeName(document.getElementById('nameToRemove').value)" type="button" class="btn btn-primary p-3">Run</button>
-
-    </form>
-    <p id="result17"></p>  
-</div>
 
 
 
@@ -226,13 +589,15 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 
 
 
-    
+
 </body>
+
 </html>
